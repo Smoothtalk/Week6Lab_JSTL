@@ -12,6 +12,16 @@
         <title>Shopping List Page</title>
     </head>
     <body>
-        <h1>Shopping List Page</h1>
+        <h1>Shopping List</h1>
+        <p>Hello ${username}</p>
+        <p><a href="?action=logout">Logout</a></p>
+        
+        <form action="ShoppingList" method="POST">
+            <h2>Add Item</h2>
+            <input type="test" name="item">
+            <input type="submit" value="Add Item">
+            <input type="hidden" name="action" value="add"
+        </form>
+        
     </body>
 </html>
