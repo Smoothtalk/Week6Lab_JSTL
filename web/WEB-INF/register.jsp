@@ -12,6 +12,12 @@
         <title>Register Page</title>
     </head>
     <body>
-        <h1>Register</h1>
+        <h1>Shopping List</h1>
+        <form action="" method="POST">        
+            <input type="text" name="username">
+            <input type="hidden" name="action" value="register">
+            <br>
+            <input type="submit" value="Register">
+        </form>
     </body>
 </html>
