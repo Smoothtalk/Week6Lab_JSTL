@@ -31,6 +31,8 @@
                     <li><input type="radio" name="item" value="${item}">${item}</li>
                 </c:forEach>
             </ul>
+            <input type="submit" value="Delete">
+            <input type="hidden" name="action" value="delete">
         </form>
     </body>
 </html>

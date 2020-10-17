@@ -46,6 +46,7 @@ public class ShoppingListServlet extends HttpServlet {
         String action = request.getParameter("action");
         HttpSession session = request.getSession();        
         ArrayList<String> items = null;
+        
         switch(action){
             case "register":
                 String username = request.getParameter("username");
@@ -54,9 +55,15 @@ public class ShoppingListServlet extends HttpServlet {
                 session.setAttribute("items", items);
                 break;
             case "add":
-                String item = request.getParameter("item");
+                String addItem = request.getParameter("item");
                 items = (ArrayList<String>) session.getAttribute("items");
-                items.add(item);
+                items.add(addItem);
+                session.setAttribute("items", items);
+                break;            
+            case "delete":
+                String deleteItem = request.getParameter("item");
+                items = (ArrayList<String>) session.getAttribute("items");
+                items.remove(deleteItem);
                 session.setAttribute("items", items);
                 break;
         }
